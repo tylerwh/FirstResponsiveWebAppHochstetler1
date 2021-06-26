@@ -33,5 +33,9 @@ namespace FirstResponsiveWebAppHochstetler.Areas.Admin.Controllers
             
             return View(model);
         }
+        public IActionResult Leave()
+        {
+            return RedirectToAction("Index", "Home", new { area = "" });
+        }
     }
 }

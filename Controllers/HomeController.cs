@@ -15,7 +15,9 @@ namespace FirstResponsiveWebAppHochstetler.Controllers
             ViewBag.Message = "";
             return View();
         }
+
         [HttpPost]
+        [Route("[controller]")]
         public IActionResult Index(Person model)
         {
             if (ModelState.IsValid)
@@ -29,6 +31,24 @@ namespace FirstResponsiveWebAppHochstetler.Controllers
             }
             
             return View(model);
+        }
+
+        [Route("[controller]/[action]")]
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        [Route("[controller]/[action]")]
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [Route("[controller]/[action]")]
+        public IActionResult More()
+        {
+            return View();
         }
     }
 }
